@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useSearchParams, useNavigate } from 'react-router-dom';
-import { FaFolder, FaUser } from 'react-icons/fa';
-import './AlbumList.css';
+import { FaFolder, FaUser,FaEye } from 'react-icons/fa';
+import '../css/AlbumList.css';
 
 const PAGE_SIZE = 10;
 
@@ -46,7 +46,7 @@ const AlbumList = () => {
         <div className="logo">
           <img src="https://agency.brvn.vn/u/geekup-logo_1682658002.jpg" alt="GeekUp Logo" style={{ width: 150,height:150 }} />
         </div>
-        <nav>
+        <nav style={{width: 150}}>
           <ul>
              <li className="active"><FaFolder /> Albums</li>
              <li><Link to="/users"><FaUser /> Users</Link></li>
@@ -85,7 +85,7 @@ const AlbumList = () => {
                     </td>
                     <td>
                       <button className="show-btn" onClick={() => navigate(`/albums/${album.id}`)}>
-                        <span role="img" aria-label="show">👁️</span> Show
+                        <span role="img" aria-label="show"><FaEye /></span> Show
                       </button>
                     </td>
                   </tr>

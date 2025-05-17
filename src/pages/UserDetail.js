@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { FaFolder, FaUser, FaArrowLeft } from 'react-icons/fa';
+import { FaFolder, FaUser, FaArrowLeft,FaEye } from 'react-icons/fa';
 import '../css/UserDetail.css';
 
 const UserDetail = () => {
@@ -31,7 +31,7 @@ const UserDetail = () => {
             style={{ width: 150, height: 150 }}
           />
         </div>
-        <nav>
+        <nav style={{width: 150}}>
           <ul>
             <li><Link to="/albums"><FaFolder /> Albums</Link></li>
             <li className="active"><FaUser /> Users</li>
@@ -49,7 +49,7 @@ const UserDetail = () => {
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            <button style={{backgroundColor:'white',color:'black',fontSize:"25px"}} onClick={() => navigate(-1)}>
+            <button className='back-button' onClick={() => navigate(-1)}>
               <FaArrowLeft />
             </button>
             <h2 style={{ margin: 0 }}>Show User</h2>
@@ -82,8 +82,8 @@ const UserDetail = () => {
                   <td>{album.id}</td>
                   <td>{album.title}</td>
                   <td>
-                    <button onClick={() => navigate(`/albums/${album.id}`)}>
-                      👁️ Show
+                    <button className='view-button' onClick={() => navigate(`/albums/${album.id}`)}>
+                   <FaEye />  Show
                     </button>
                   </td>
                 </tr>
