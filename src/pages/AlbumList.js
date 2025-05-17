@@ -75,7 +75,7 @@ const AlbumList = () => {
                       {user && (
                         <div className="user-info">
                           <img
-                            src={`https://ui-avatars.com/api/?name=${encodeURIComponent(user.name)}&background=ea4c89&color=fff&size=32`}
+                            src={`https://ui-avatars.com/api/?background=random&rounded=true&name=${encodeURIComponent(user.name)}`}
                             alt={user.name}
                             className="avatar"
                           />

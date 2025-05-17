@@ -1,0 +1,43 @@
+.photo-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.photo-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.photo-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.photo-wrapper .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 12px;
+  
+  /* Ẩn overlay khi không hover */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.photo-wrapper:hover .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
