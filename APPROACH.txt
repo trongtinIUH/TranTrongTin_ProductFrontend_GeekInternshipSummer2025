@@ -1,0 +1,35 @@
+APPROACH
+
+1. **Công nghệ & Thư viện sử dụng**
+- ReactJS: Xây dựng giao diện động, component-based.
+- React Router DOM: Điều hướng giữa các trang (AlbumList, AlbumDetail, UserList, UserDetail).
+- React Icons: Sử dụng icon đẹp, đồng bộ UI.
+- Fetch API: Lấy dữ liệu từ API public (jsonplaceholder, ui-avatars).
+- CSS thuần: Tách riêng từng file cho từng page, dễ bảo trì.
+
+2. **Cách tổ chức code**
+- Tách riêng từng page vào thư mục `src/pages/`.
+- CSS cho từng page đặt trong `src/css/`.
+- Cấu hình router tập trung tại `App.js`.
+- Không sử dụng state management phức tạp để giữ code đơn giản, dễ hiểu.
+
+3. **Xử lý dữ liệu & UI**
+- Fetch dữ liệu albums, users, photos qua useEffect.
+- Hiển thị loading khi đang lấy dữ liệu.
+- Phân trang album, đồng bộ state với URL.
+- Avatar user lấy từ ui-avatars, luôn có alt cho ảnh.
+- Các trường email, phone, website đều là link đúng chuẩn (mailto, tel, http).
+- Ảnh album có xử lý lỗi.
+- Các nút, link đều có cursor pointer, hiệu ứng hover rõ ràng.
+
+4. **Lý do chọn giải pháp**
+- Đơn giản, dễ mở rộng, dễ bảo trì.
+- Không phụ thuộc framework UI ngoài (Material UI, Ant Design) để code nhẹ, dễ kiểm soát.
+- Dễ dàng custom UI theo yêu cầu đề bài.
+
+5. **Lưu ý kỹ thuật**
+- Không cần backend, chỉ cần internet để fetch dữ liệu.
+- Đảm bảo responsive cơ bản cho màn hình >=1280px.
+- Code sạch, đặt tên biến rõ ràng, không lỗi chính tả.
+
+---
